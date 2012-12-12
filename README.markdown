@@ -2,7 +2,7 @@ I created the repository and pushed it up to Github. :-)
 
 Installation:
 
-    git clone git://github.com/mrrcollins/vim.git ~/.vim
+    git clone https://github.com/mrrcollins/vim.git ~/.vim
 
 Create symlinks:
 
