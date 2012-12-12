@@ -1,3 +1,6 @@
+I created the repository and pushed it up to Github. :-)
+
+[From here](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
 Installation:
 
     git clone git://github.com/nelstrom/dotvim.git ~/.vim
@@ -13,4 +16,3 @@ Switch to the `~/.vim` directory, and fetch submodules:
     git submodule init
     git submodule update
 
-[From here](http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/)
