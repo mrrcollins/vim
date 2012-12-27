@@ -5,6 +5,11 @@ set ruler
 ""set colorcolumn=80
 :startinsert
 
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+endif
+
 set mouse=a
 
 filetype plugin indent on
