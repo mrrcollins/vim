@@ -8,6 +8,8 @@ set ruler
 if has('gui_running')
     set background=dark
     colorscheme solarized
+    set guifont=Source\ Code\ Pro:h14
+    set guioptions-=r   "Don't show right scroll bar
 endif
 
 set mouse=a
