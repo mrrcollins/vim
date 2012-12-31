@@ -3,7 +3,7 @@ set number
 "set nowrap
 set ruler
 ""set colorcolumn=80
-:startinsert
+""startinsert
 
 if has('gui_running')
     set background=dark
