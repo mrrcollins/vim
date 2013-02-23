@@ -15,7 +15,10 @@ endif
 set mouse=a
 
 filetype plugin indent on
-setlocal tabstop=4 shiftwidth=4 expandtab
+""setlocal tabstop=4 shiftwidth=4 expandtab
+set tabstop=4 
+set shiftwidth=4 
+set expandtab
 
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
