@@ -12,7 +12,7 @@ if has('gui_running')
     set guioptions-=r   "Don't show right scroll bar
 endif
 
-set mouse=a
+""set mouse=a
 
 filetype plugin indent on
 ""setlocal tabstop=4 shiftwidth=4 expandtab
