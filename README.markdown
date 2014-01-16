@@ -2,6 +2,7 @@
 
 A lot of trial, error, and research has gotten me to the point where I realize how amazing vim is. :-)
 
+
 # Installation:
 
     git clone https://github.com/mrrcollins/vim.git ~/.vim
@@ -15,6 +16,7 @@ A lot of trial, error, and research has gotten me to the point where I realize h
     git clone https://github.com/garbas/vim-snipmate.git
     git clone https://github.com/honza/vim-snippets.git
     git clone https://github.com/rodjek/vim-puppet.git
+    git clone https://github.com/scrooloose/nerdtree.git
 
 # Create symlinks:
 

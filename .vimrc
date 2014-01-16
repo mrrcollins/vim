@@ -13,6 +13,7 @@ if has('gui_running')
 ""    set guifont=Source\ Code\ Pro:h14
     set guifont=DejaVu\ Sans\ Mono\ 12
     set guioptions-=r   "Don't show right scroll bar
+    set guioptions-=T  "remove toolbar"
 endif
 
 ""set mouse=a
