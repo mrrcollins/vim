@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/gozar'
-let g:netrw_dirhist_2='/home/collinsr'
-let g:netrw_dirhist_3='/home/collinsr/Dropbox'
-let g:netrw_dirhist_4='/home/collinsr/Dropbox/Elements'
-let g:netrw_dirhist_5='/home/collinsr/Dropbox/Elements/GozNotes'
-let g:netrw_dirhist_6='/Network/Servers/ol.kcs/Volumes/Raid/Users/collinsr/t'

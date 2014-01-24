@@ -11,7 +11,7 @@ hi NonText ctermfg=0
 setlocal spell spelllang=en_us
 
 set linespace=8
-set guifont=Source\ Code\ Pro\ Medium\ 16
+set guifont=Source\ Code\ Pro\ Medium\ 18
 set tw=80
 hi Normal guibg=gray95
 hi NonText guifg=gray95
