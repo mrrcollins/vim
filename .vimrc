@@ -16,6 +16,28 @@ if has('gui_running')
     set guioptions-=T  "remove toolbar"
 endif
 
+""function! WordCount()
+""    let s:old_status = v:statusmsg
+""    let position = getpos(".")
+""    exe ":silent normal g\"
+""    let stat = v:statusmsg
+""    let s:word_count = 0
+""    if stat != '--No lines in buffer--'
+""    let s:word_count = str2nr(split(v:statusmsg)[11])
+""    let v:statusmsg = s:old_status
+""    end
+""    call setpos('.', position)
+""    return s:word_count 
+""endfunction"
+
+""function WordCount()
+""    let s:old_status = v:statusmsg
+""    exe "silent normal g\<c-g>"
+""    let s:word_count = str2nr(split(v:statusmsg)[11])
+""    let v:statusmsg = s:old_status
+""    return s:word_count
+""endfunction
+
 ""set mouse=a
 
 filetype plugin indent on
@@ -23,6 +45,7 @@ filetype plugin indent on
 set tabstop=4 
 set shiftwidth=4 
 set expandtab
+au BufRead * normal zR
 
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
@@ -33,3 +56,4 @@ highlight LineNr ctermfg=darkcyan ctermbg=black
 ""set wrap linebreak nolist
 ""set tw=72 
 
+""set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
