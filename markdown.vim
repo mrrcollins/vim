@@ -11,8 +11,10 @@ hi NonText ctermfg=0
 setlocal spell spelllang=en_us
 
 set linespace=8
-set guifont=Source\ Code\ Pro\ Medium\ 16
-set tw=80
+set guifont=Source\ Code\ Pro\ Medium\ 18
+set tw=72
+""setl fo=aw2tq
+
 hi Normal guibg=gray95
 hi NonText guifg=gray95
 ""hi FoldColumn guibg=gray95
@@ -33,3 +35,4 @@ hi markdownIdDeclaration guifg=#317849 gui=bold
 hi markdownListMarker guifg=#317849
 highlight Cursor guibg=#15abdd
 
+""set statusline=wc:%{WordCount()}
