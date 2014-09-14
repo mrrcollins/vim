@@ -30,3 +30,6 @@ highlight LineNr ctermfg=darkcyan ctermbg=black
 ""set wrap linebreak nolist
 ""set tw=72 
 
+:abbr #b /************************************************ 
+:abbr #e ************************************************/
+
