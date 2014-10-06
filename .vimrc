@@ -56,4 +56,7 @@ highlight LineNr ctermfg=darkcyan ctermbg=black
 ""set wrap linebreak nolist
 ""set tw=72 
 
+:abbr #b /************************************************ 
+:abbr #e ************************************************/
+
 ""set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
