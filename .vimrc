@@ -14,6 +14,8 @@ if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ 12
     set guioptions-=r   "Don't show right scroll bar
     set guioptions-=T  "remove toolbar"
+
+    autocmd FileType markdown,md,rst setlocal foldcolumn=10 columns=100
 endif
 
 ""function! WordCount()
@@ -50,7 +52,7 @@ au BufRead * normal zR
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcomplete#CompletePHP
-autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=80 wrapmargin=0
+autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=80 wrapmargin=0 foldcolumn=10 columns=100 nonumber
 
 highlight LineNr ctermfg=darkcyan ctermbg=black
 
