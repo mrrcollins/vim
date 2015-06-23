@@ -55,6 +55,7 @@ autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcompl
 autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=80 wrapmargin=0 foldcolumn=10 columns=100 nonumber
 
 highlight LineNr ctermfg=darkcyan ctermbg=black
+highlight foldcolumn ctermbg=black
 
 ""set wrap linebreak nolist
 ""set tw=72 
