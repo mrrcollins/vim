@@ -50,6 +50,7 @@ au BufRead * normal zR
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcomplete#CompletePHP
+autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=80 wrapmargin=0
 
 highlight LineNr ctermfg=darkcyan ctermbg=black
 
