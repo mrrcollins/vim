@@ -41,6 +41,20 @@ endif
 
 ""set mouse=a
 
+function! WordProcessorMode()
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    map j gj
+    map k gk
+    setlocal spell spelllang=en_us
+    set complete+=s
+    setlocal wrap
+    setlocal linebreak nolist
+    setlocal foldcolumn=10
+    setlocal nonumber
+endfu
+com! WP call WordProcessorMode()
+
 filetype plugin indent on
 ""setlocal tabstop=4 shiftwidth=4 expandtab
 set tabstop=4 
@@ -52,7 +66,7 @@ autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcomplete#CompletePHP
 ""autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=72 wrapmargin=0 foldcolumn=10 columns=100 nonumber
-autocmd FileType markdown,md,rst setlocal foldcolumn=10 columns=80 nonumber
+autocmd FileType markdown,md,rst WP
 
 highlight LineNr ctermfg=darkcyan ctermbg=black
 highlight foldcolumn ctermbg=black
