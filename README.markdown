@@ -2,6 +2,16 @@
 
 A lot of trial, error, and research has gotten me to the point where I realize how amazing vim is. :-)
 
+# Keypresses
+
+## Taskpaper
+Autocomplete tags - C-x C-n
+Mark task done: \td
+Archive task: \tD
+Search for tags: \ts
+
+## Word Processing
+Synonyms: C-x C-t
 
 # Installation:
 
