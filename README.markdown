@@ -12,6 +12,8 @@ Search for tags: \ts
 
 ## Word Processing
 Synonyms: C-x C-t
+Add word to dictionary: zg
+Lookup misspelled word: lz=
 
 # Installation:
 
