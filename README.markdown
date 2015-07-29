@@ -15,6 +15,12 @@ Synonyms: C-x C-t
 Add word to dictionary: zg
 Lookup misspelled word: lz=
 
+## Show/Hide plug in
+
+	zs - Show all lines containing word under cursor 
+    zh - Hide all lines containing word under cursor 
+	zn - Open all folds
+
 # Installation:
 
     git clone https://github.com/mrrcollins/vim.git ~/.vim
