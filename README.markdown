@@ -29,6 +29,7 @@ Lookup misspelled word: lz=
     git clone https://github.com/honza/vim-snippets.git
     git clone https://github.com/rodjek/vim-puppet.git
     git clone https://github.com/scrooloose/nerdtree.git
+	git clone https://github.com/skrzyp/vim-mads
 
 # Create symlinks:
 
