@@ -5,15 +5,23 @@ A lot of trial, error, and research has gotten me to the point where I realize h
 # Keypresses
 
 ## Taskpaper
-Autocomplete tags - C-x C-n
-Mark task done: \td
-Archive task: \tD
-Search for tags: \ts
+
+	Autocomplete tags - C-x C-n
+	Mark task done: \td
+	Archive task: \tD
+	Search for tags: \ts
 
 ## Word Processing
-Synonyms: C-x C-t
-Add word to dictionary: zg
-Lookup misspelled word: lz=
+
+	Synonyms: C-x C-t
+	Add word to dictionary: zg
+	Lookup misspelled word: lz=
+
+## Show/Hide plug in
+
+	zs - Show all lines containing word under cursor 
+    zh - Hide all lines containing word under cursor 
+	zn - Open all folds
 
 # Installation:
 
