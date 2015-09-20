@@ -69,6 +69,10 @@ autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcompl
 ""autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=72 wrapmargin=0 foldcolumn=10 columns=100 nonumber
 autocmd FileType markdown,md,rst WP
 
+" Inform7
+au BufNewFile,BufRead *.ni      setf inform7
+
+
 highlight LineNr ctermfg=darkcyan ctermbg=black
 highlight foldcolumn ctermbg=black
 
