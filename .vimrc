@@ -83,3 +83,17 @@ highlight foldcolumn ctermbg=black
 :abbr #e ************************************************/
 
 ""set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+
+" If the current buffer has never been saved, it will have no name,
+" call the file browser to save it, otherwise just save it.
+" You will probably have to do a:
+" stty -ixon
+" so the shell doesn't grab control s
+command -nargs=0 -bar Update if &modified 
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+nnoremap <silent> <C-S> :<C-u>Update<CR>
