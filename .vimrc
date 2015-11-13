@@ -53,6 +53,7 @@ function! WordProcessorMode()
     setlocal linebreak nolist
     setlocal foldcolumn=10
     setlocal nonumber
+    hi FoldColumn ctermbg=Black ctermfg=Black
 endfu
 com! WP call WordProcessorMode()
 
