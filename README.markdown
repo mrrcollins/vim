@@ -30,7 +30,8 @@ A lot of trial, error, and research has gotten me to the point where I realize h
 
 ## Bundles
 
-    cd ~/.vim/bundle
+    mkdir ~/.vim/bundle
+	cd ~/.vim/bundle
     git clone https://github.com/tomtom/tlib_vim.git
     git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
     git clone https://github.com/garbas/vim-snipmate.git
@@ -38,6 +39,7 @@ A lot of trial, error, and research has gotten me to the point where I realize h
     git clone https://github.com/rodjek/vim-puppet.git
     git clone https://github.com/scrooloose/nerdtree.git
 	git clone https://github.com/skrzyp/vim-mads
+	git clone https://github.com/tpope/vim-surround.git
 
 # Create symlinks:
 
