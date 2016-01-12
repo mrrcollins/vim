@@ -43,7 +43,9 @@ endif
 
 function! WordProcessorMode()
     setlocal formatoptions=1
-    setlocal noexpandtab
+    setlocal expandtab
+    setlocal tabstop=4
+    setlocal shiftwidth=4
     map j gj
     map k gk
     setlocal spell spelllang=en_us
