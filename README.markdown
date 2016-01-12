@@ -5,15 +5,23 @@ A lot of trial, error, and research has gotten me to the point where I realize h
 # Keypresses
 
 ## Taskpaper
-Autocomplete tags - C-x C-n
-Mark task done: \td
-Archive task: \tD
-Search for tags: \ts
+
+	Autocomplete tags - C-x C-n
+	Mark task done: \td
+	Archive task: \tD
+	Search for tags: \ts
 
 ## Word Processing
-Synonyms: C-x C-t
-Add word to dictionary: zg
-Lookup misspelled word: lz=
+
+	Synonyms: C-x C-t
+	Add word to dictionary: zg
+	Lookup misspelled word: lz=
+
+## Show/Hide plug in
+
+	zs - Show all lines containing word under cursor 
+    zh - Hide all lines containing word under cursor 
+	zn - Open all folds
 
 # Installation:
 
@@ -22,13 +30,16 @@ Lookup misspelled word: lz=
 
 ## Bundles
 
-    cd ~/.vim/bundle
+    mkdir ~/.vim/bundle
+	cd ~/.vim/bundle
     git clone https://github.com/tomtom/tlib_vim.git
     git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
     git clone https://github.com/garbas/vim-snipmate.git
     git clone https://github.com/honza/vim-snippets.git
     git clone https://github.com/rodjek/vim-puppet.git
     git clone https://github.com/scrooloose/nerdtree.git
+	git clone https://github.com/skrzyp/vim-mads
+	git clone https://github.com/tpope/vim-surround.git
 
 # Create symlinks:
 

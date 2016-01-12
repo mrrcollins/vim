@@ -55,6 +55,7 @@ function! WordProcessorMode()
     setlocal linebreak nolist
     setlocal foldcolumn=10
     setlocal nonumber
+    hi FoldColumn ctermbg=Black ctermfg=Black
 endfu
 com! WP call WordProcessorMode()
 
@@ -71,6 +72,10 @@ autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcompl
 ""autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=72 wrapmargin=0 foldcolumn=10 columns=100 nonumber
 autocmd FileType markdown,md,rst WP
 
+" Inform7
+au BufNewFile,BufRead *.ni      setf inform7
+
+
 highlight LineNr ctermfg=darkcyan ctermbg=black
 highlight foldcolumn ctermbg=black
 
@@ -81,3 +86,17 @@ highlight foldcolumn ctermbg=black
 :abbr #e ************************************************/
 
 ""set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+
+" If the current buffer has never been saved, it will have no name,
+" call the file browser to save it, otherwise just save it.
+" You will probably have to do a:
+" stty -ixon
+" so the shell doesn't grab control s
+command -nargs=0 -bar Update if &modified 
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+nnoremap <silent> <C-S> :<C-u>Update<CR>
