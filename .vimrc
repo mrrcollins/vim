@@ -72,6 +72,11 @@ autocmd FileType markdown,md,rst WP
 " Inform7
 au BufNewFile,BufRead *.ni      setf inform7
 
+"Easier navigations of splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 highlight LineNr ctermfg=darkcyan ctermbg=black
 highlight foldcolumn ctermbg=black
@@ -97,3 +102,12 @@ command -nargs=0 -bar Update if &modified
                            \|    endif
                            \|endif
 nnoremap <silent> <C-S> :<C-u>Update<CR>
+
+" highlight the status bar when in insert mode
+" (https://github.com/chrishunt/dot-files/)
+set laststatus=2
+if version >= 700
+      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+endif
+
