@@ -40,6 +40,7 @@ A lot of trial, error, and research has gotten me to the point where I realize h
     git clone https://github.com/scrooloose/nerdtree.git
 	git clone https://github.com/skrzyp/vim-mads
 	git clone https://github.com/tpope/vim-surround.git
+    git clone https://github.com/reedes/vim-pencil
 
 # Create symlinks:
 
