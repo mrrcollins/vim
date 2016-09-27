@@ -42,6 +42,7 @@ endif
 ""set mouse=a
 
 function! WordProcessorMode()
+    let g:pencil#wrapModeDefault = 'soft'
     setlocal formatoptions=1
     setlocal expandtab
     setlocal tabstop=4
@@ -56,6 +57,9 @@ function! WordProcessorMode()
     setlocal foldcolumn=10
     setlocal nonumber
     hi FoldColumn ctermbg=Black ctermfg=Black
+    call pencil#init()
+    set statusline=%<%f\ %h%m%r%w\ \ %{PencilMode()}\ %=\ col\ %c%V\ \ line\ %l\,%L\ %P
+    set rulerformat=%-12.(%l,%c%V%)%{PencilMode()}\ %P
 endfu
 com! WP call WordProcessorMode()
 
@@ -70,7 +74,7 @@ autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcomplete#CompletePHP
 ""autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=72 wrapmargin=0 foldcolumn=10 columns=100 nonumber
-autocmd FileType markdown,md,rst WP
+autocmd FileType markdown,md,rst WP 
 
 " Inform7
 au BufNewFile,BufRead *.ni      setf inform7
