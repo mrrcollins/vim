@@ -1,4 +1,4 @@
 spell/en.utf-8.add.spl
 *.swp
 bundle/
-
+.DS_Store
