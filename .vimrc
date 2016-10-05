@@ -43,7 +43,7 @@ endif
 
 function! WordProcessorMode()
     let g:pencil#wrapModeDefault = 'soft'
-    setlocal formatoptions=1
+    ""setlocal formatoptions=1
     setlocal expandtab
     setlocal tabstop=4
     setlocal shiftwidth=4
@@ -52,8 +52,8 @@ function! WordProcessorMode()
     setlocal spell spelllang=en_us
     set thesaurus+=~/.vim/thesaurus/mthesaur.txt
     set complete+=s
-    setlocal wrap
-    setlocal linebreak nolist
+    ""setlocal wrap
+    ""setlocal linebreak nolist
     setlocal foldcolumn=10
     setlocal nonumber
     hi FoldColumn ctermbg=Black ctermfg=Black
