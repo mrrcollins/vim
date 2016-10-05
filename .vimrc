@@ -30,7 +30,7 @@ endif
 ""    call setpos('.', position)
 ""    return s:word_count 
 ""endfunction"
-
+""
 ""function WordCount()
 ""    let s:old_status = v:statusmsg
 ""    exe "silent normal g\<c-g>"
@@ -38,7 +38,7 @@ endif
 ""    let v:statusmsg = s:old_status
 ""    return s:word_count
 ""endfunction
-
+""
 ""set mouse=a
 
 function! WordProcessorMode()
@@ -60,6 +60,7 @@ function! WordProcessorMode()
     call pencil#init()
     set statusline=%<%f\ %h%m%r%w\ \ %{PencilMode()}\ %=\ col\ %c%V\ \ line\ %l\,%L\ %P
     set rulerformat=%-12.(%l,%c%V%)%{PencilMode()}\ %P
+    call WordCount()
 endfu
 com! WP call WordProcessorMode()
 
