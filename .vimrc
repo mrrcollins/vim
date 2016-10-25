@@ -6,6 +6,7 @@ set number
 set ruler
 ""set colorcolumn=80
 ""startinsert
+set directory=~/tmp//,/var/tmp//,/tmp//,.
 
 if has('gui_running')
     set background=dark
