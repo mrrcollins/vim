@@ -1,5 +1,7 @@
 execute pathogen#infect()
 
+imap jj <Esc>
+
 syntax on
 set number
 "set nowrap
