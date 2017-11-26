@@ -51,6 +51,10 @@ endif
 ""set mouse=a
 
 function! WordProcessorMode()
+
+    iab xtime <c-r>=strftime("%H:%M:%S")<cr>
+    iab xdate <c-r>=strftime("%m/%d/%y %H:%M:%S")<cr>
+
     let g:pencil#wrapModeDefault = 'soft'
     ""setlocal formatoptions=1
     setlocal expandtab
@@ -69,6 +73,7 @@ function! WordProcessorMode()
     call pencil#init()
     set statusline=%<%f\ %h%m%r%w\ \ %{PencilMode()}\ %=\ col\ %c%V\ \ line\ %l\,%L\ %P
     set rulerformat=%-12.(%l,%c%V%)%{PencilMode()}\ %P
+
 endfu
 com! WP call WordProcessorMode()
 
@@ -106,6 +111,7 @@ highlight foldcolumn ctermbg=black
 :abbr #b /************************************************ 
 :abbr #e ************************************************/
 
+
 ""set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 
 " If the current buffer has never been saved, it will have no name,
@@ -130,3 +136,4 @@ if version >= 700
       au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 endif
 
+au BufRead,BufNewFile * startinsert
