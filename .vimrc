@@ -22,9 +22,10 @@ set ruler
 set directory=~/tmp//,/var/tmp//,/tmp//,.
 
 " Autosave taskpaper files                    
-" Plugin 'vim-scripts/vim-auto-save' 
+" Plugin 'plugin/vim-auto-save' 
 " Plugin 'djoshea/vim-autoread'      
-" autocmd filetype taskpaper let g:auto_save = 1
+autocmd filetype taskpaper let g:auto_save = 1
+autocmd filetype taskpaper :WatchForChanges!
 "
 
 if has('gui_running')

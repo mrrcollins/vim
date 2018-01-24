@@ -41,10 +41,11 @@ A lot of trial, error, and research has gotten me to the point where I realize h
 	git clone https://github.com/skrzyp/vim-mads
 	git clone https://github.com/tpope/vim-surround.git
     git clone https://github.com/reedes/vim-pencil
+    git clone https://github.com/djoshea/vim-autoread.git
 
 # Create symlinks:
 
-    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/.vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
 
 #Switch to the `~/.vim` directory, and fetch submodules:
