@@ -148,4 +148,4 @@ if version >= 700
       au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
 endif
 
-au BufRead,BufNewFile * startinsert
+""au BufRead,BufNewFile * startinsert
