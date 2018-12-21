@@ -82,6 +82,7 @@ function! WordProcessorMode()
     ""setlocal wrap
     ""setlocal linebreak nolist
     setlocal foldcolumn=10
+    set tw=72
     setlocal nonumber
     hi FoldColumn ctermbg=Black ctermfg=Black
     call pencil#init()
