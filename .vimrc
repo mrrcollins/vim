@@ -1,7 +1,7 @@
 execute pathogen#infect()
 
 imap jj <Esc>
-iab <expr> dts strftime("%Y/%m/%d %H:%M")
+iab <expr> dts strftime("%Y/%m/%d %H:%M -")
 
 map <C-n> :NERDTreeToggle<CR>
 
