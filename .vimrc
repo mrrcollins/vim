@@ -65,8 +65,33 @@ endif
 ""
 ""set mouse=a
 
-function! WordProcessorMode()
+"" Goyo for distraction free editing
+function! s:goyo_enter()
+  silent !tmux set status off
+  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  ""Limelight
+  " ...
+endfunction
 
+function! s:goyo_leave()
+  silent !tmux set status on
+  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set showmode
+  set showcmd
+  set scrolloff=5
+  "Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
+"" Set up for word processing Markdown files
+function! WordProcessorMode()
     iab xtime <c-r>=strftime("%H:%M:%S")<cr>
     iab xdate <c-r>=strftime("%m/%d/%y %H:%M:%S")<cr>
 
@@ -82,15 +107,16 @@ function! WordProcessorMode()
     set complete+=s
     ""setlocal wrap
     ""setlocal linebreak nolist
-    setlocal foldcolumn=10
-    set tw=72
+    ""setlocal foldcolumn=10
+    ""set tw=72
     setlocal nonumber
     hi FoldColumn ctermbg=Black ctermfg=Black
     call pencil#init()
-    set statusline=%<%f\ %h%m%r%w\ \ %{PencilMode()}\ %=\ col\ %c%V\ \ line\ %l\,%L\ %P
-    set rulerformat=%-12.(%l,%c%V%)%{PencilMode()}\ %P
+    ""set statusline=%<%f\ %h%m%r%w\ \ %{PencilMode()}\ %=\ col\ %c%V\ \ line\ %l\,%L\ %P
+    ""set rulerformat=%-12.(%l,%c%V%)%{PencilMode()}\ %P
+    Goyo
+endfunction
 
-endfu
 com! WP call WordProcessorMode()
 
 filetype plugin indent on
