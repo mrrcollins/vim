@@ -173,9 +173,9 @@ nnoremap <silent> <C-S> :<C-u>Update<CR>
 " highlight the status bar when in insert mode
 " (https://github.com/chrishunt/dot-files/)
 set laststatus=2
-if version >= 700
-      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-endif
-
+""if version >= 700
+""      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+""      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+""endif
+""
 ""au BufRead,BufNewFile * startinsert
