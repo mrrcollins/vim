@@ -3,6 +3,9 @@ execute pathogen#infect()
 imap jj <Esc>
 iab <expr> dts strftime("%Y/%m/%d %H:%M -")
 
+noremap <c-g> :Goyo<CR>
+imap <c-g> <C-O><c-g>
+
 map <C-n> :NERDTreeToggle<CR>
 
 " If the current buffer has never been saved, it will have no name,
@@ -114,7 +117,7 @@ function! WordProcessorMode()
     call pencil#init()
     ""set statusline=%<%f\ %h%m%r%w\ \ %{PencilMode()}\ %=\ col\ %c%V\ \ line\ %l\,%L\ %P
     ""set rulerformat=%-12.(%l,%c%V%)%{PencilMode()}\ %P
-    Goyo
+    ""Goyo
 endfunction
 
 com! WP call WordProcessorMode()
