@@ -3,6 +3,8 @@ execute pathogen#infect()
 imap jj <Esc>
 iab <expr> dts strftime("%Y/%m/%d %H:%M -")
 
+let g:vim_markdown_auto_extension_ext = 'markdown'
+
 noremap <c-g> :Goyo<CR>
 imap <c-g> <C-O><c-g>
 
@@ -95,6 +97,7 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 "" Set up for word processing Markdown files
 function! WordProcessorMode()
+
     iab xtime <c-r>=strftime("%H:%M:%S")<cr>
     iab xdate <c-r>=strftime("%m/%d/%y %H:%M:%S")<cr>
 

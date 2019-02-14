@@ -43,13 +43,14 @@ A lot of trial, error, and research has gotten me to the point where I realize h
     git clone https://github.com/reedes/vim-pencil
     git clone https://github.com/djoshea/vim-autoread.git
     git clone https://github.com/junegunn/goyo.vim.git
+    git clone https://github.com/plasticboy/vim-markdown.git
 
 # Create symlinks:
 
     ln -s ~/.vim/.vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
 
-#Switch to the `~/.vim` directory, and fetch submodules:
+# Switch to the `~/.vim` directory, and fetch submodules:
 
     cd ~/.vim
     git submodule init
