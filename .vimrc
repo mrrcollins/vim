@@ -4,11 +4,20 @@ imap jj <Esc>
 iab <expr> dts strftime("%Y/%m/%d %H:%M -")
 
 let g:vim_markdown_auto_extension_ext = 'markdown'
-
+let @r = ""
 noremap <c-g> :Goyo<CR>
 imap <c-g> <C-O><c-g>
 
 map <C-n> :NERDTreeToggle<CR>
+
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
