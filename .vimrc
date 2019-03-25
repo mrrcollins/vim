@@ -16,7 +16,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" If you want :UltiSnipsEdit to split your window.
+" Set UltiSnipsFolder"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+
+"
 let g:UltiSnipsEditSplit="vertical"
 
 " If the current buffer has never been saved, it will have no name,
