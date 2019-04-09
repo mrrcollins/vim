@@ -47,6 +47,9 @@ set directory=~/tmp//,/var/tmp//,/tmp//,.
 autocmd filetype taskpaper let g:auto_save = 1
 autocmd filetype taskpaper :WatchForChanges!
 "
+autocmd filetype markdown let g:auto_save = 1
+autocmd filetype markdown :WatchForChanges!
+
 
 if has('gui_running')
     set background=dark
