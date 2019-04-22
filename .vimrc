@@ -10,6 +10,11 @@ imap <c-g> <C-O><c-g>
 
 map <C-n> :NERDTreeToggle<CR>
 
+" Zoom splits
+" [Zooming Vim Window Splits Like a Pro](https://medium.com/@vinodkri/zooming-vim-window-splits-like-a-pro-d7a9317d40)
+noremap Zz <c-w>_ \| <c-w>\|
+noremap Zo <c-w>=
+
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
