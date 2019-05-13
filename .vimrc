@@ -15,6 +15,8 @@ map <C-n> :NERDTreeToggle<CR>
 noremap Zz <c-w>_ \| <c-w>\|
 noremap Zo <c-w>=
 
+" Configure taskpaper
+let g:task_paper_follow_move = 0
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -23,8 +25,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Set UltiSnipsFolder"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
-
-"
 let g:UltiSnipsEditSplit="vertical"
 
 " If the current buffer has never been saved, it will have no name,
