@@ -3,12 +3,19 @@ execute pathogen#infect()
 imap jj <Esc>
 iab <expr> dts strftime("%Y/%m/%d %H:%M -")
 
+" [plasticboy/vim\-markdown: Markdown Vim Mode](https://github.com/plasticboy/vim-markdown)
 let g:vim_markdown_auto_extension_ext = 'markdown'
+" Fold on header 1
+let g:vim_markdown_folding_level = 1
+" Follow links to edit a file with `ge`
+"let g:vim_markdown_no_extensions_in_markdown = 1
+
 let @r = ""
 noremap <c-g> :Goyo<CR>
 imap <c-g> <C-O><c-g>
 
 map <C-n> :NERDTreeToggle<CR>
+nnoremap <leader>b :buffers<CR>:buffer<space>
 
 " Zoom splits
 " [Zooming Vim Window Splits Like a Pro](https://medium.com/@vinodkri/zooming-vim-window-splits-like-a-pro-d7a9317d40)
