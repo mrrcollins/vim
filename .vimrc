@@ -71,7 +71,7 @@ if has('gui_running')
     set background=dark
     colorscheme solarized
 ""    set guifont=Source\ Code\ Pro:h14
-    set guifont=Consolas:h10:cANSI
+    set guifont=Consolas:h16:cANSI
     set guioptions-=r   "Don't show right scroll bar
     set guioptions-=T  "remove toolbar"
 
