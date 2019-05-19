@@ -7,6 +7,9 @@ execute pathogen#infect()
 imap jj <Esc>
 iab <expr> dts strftime("%Y/%m/%d %H:%M -")
 
+"Run scripts directly
+nnoremap <leader>r :w<enter>:!"%:p"<enter>
+
 " [plasticboy/vim\-markdown: Markdown Vim Mode](https://github.com/plasticboy/vim-markdown)
 let g:vim_markdown_auto_extension_ext = 'markdown'
 " Fold on header 1
