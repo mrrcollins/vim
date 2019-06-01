@@ -38,6 +38,15 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 
+" Some security features
+" Change default encryption
+
+" First make sure nothing is written to ~/.viminfo while editing
+" an encrypted file.
+autocmd BufReadPre,FileReadPre *.x set viminfo=
+autocmd BufReadPre,FileReadPre *.x set noswapfile
+set cm=blowfish
+
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
 ""command -nargs=0 -bar Update if &modified 
