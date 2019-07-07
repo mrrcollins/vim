@@ -16,6 +16,8 @@ let g:vim_markdown_auto_extension_ext = 'markdown'
 let g:vim_markdown_folding_level = 1
 " Follow links to edit a file with `ge`
 "let g:vim_markdown_no_extensions_in_markdown = 1
+" Shrink the table of contents"
+let g:vim_markdown_toc_autofit = 1
 
 let @r = ""
 noremap <c-g> :Goyo<CR>
