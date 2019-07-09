@@ -35,6 +35,10 @@ echo "Attempting to clone vim-markdown..."
 echo "Attempting to clone vim-move..."
 [ ! -d vim-move ] && git clone --quiet https://github.com/matze/vim-move.git
 
+echo "Removing vim-snipmate..."
+[ ! -d vim-snipmate ] && rm -Rf vim-snipmate
+
+
 [ ! -L ~/.vimrc ] && ln -s ~/.vim/.vimrc ~/.vimrc || echo "Symlink already exists..."
 
 cd ~/.vim
