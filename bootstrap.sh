@@ -28,6 +28,8 @@ if [ ! -d ~/.vim/bundle ]; then
 	git clone --quiet https://github.com/junegunn/goyo.vim.git
     echo "Cloning vim-markdown..."
 	git clone --quiet https://github.com/plasticboy/vim-markdown.git
+    echo "Cloning vim-move..."
+    git clone --quiet https://github.com/matze/vim-move.git
 else
 	echo "~/.vim/bundle folder already exists..."
 fi
