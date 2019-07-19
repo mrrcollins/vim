@@ -12,6 +12,8 @@ nnoremap <leader>r :w<enter>:!"%:p"<enter>
 
 let g:move_key_modifier = 'C'
 
+let g:NERDTreeWinPos = "right"
+
 " [plasticboy/vim\-markdown: Markdown Vim Mode](https://github.com/plasticboy/vim-markdown)
 let g:vim_markdown_auto_extension_ext = 'markdown'
 " Fold on header 1
