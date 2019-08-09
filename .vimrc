@@ -41,7 +41,10 @@ noremap Zo <c-w>=
 
 " Configure taskpaper
 let g:task_paper_follow_move = 0
-
+nnoremap <buffer> <silent> <Leader>tq
+    \    :<C-u>call taskpaper#add_tag('priority')<CR>
+nnoremap <buffer> <silent> <Leader>tQ
+    \    :<C-u>call taskpaper#delete_tag('priority', '')<CR>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
