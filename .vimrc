@@ -19,6 +19,7 @@ let g:vim_markdown_auto_extension_ext = 'markdown'
 " Fold on header 1
 let g:vim_markdown_folding_level = 2
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
 
 " Follow links to edit a file with `ge`
 "let g:vim_markdown_no_extensions_in_markdown = 1
