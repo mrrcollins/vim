@@ -1,0 +1,3 @@
+[submodule "UltiSnips/vim-react-snippets"]
+	path = UltiSnips/vim-react-snippets
+	url = https://github.com/mlaursen/vim-react-snippets.git
