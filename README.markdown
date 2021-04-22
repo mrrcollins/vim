@@ -44,6 +44,7 @@ A lot of trial, error, and research has gotten me to the point where I realize h
     git clone https://github.com/djoshea/vim-autoread.git
     git clone https://github.com/junegunn/goyo.vim.git
     git clone https://github.com/plasticboy/vim-markdown.git
+    git clone https://github.com/freitass/todo.txt-vim.git
 
 There is probably a better way, but here is a one-liners stolen from [here](https://coderwall.com/p/rffwva/update-your-vim-pathogen-plugins)to update all of the plugins in `~/.vim/bundle`: 
 
