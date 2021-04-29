@@ -11,9 +11,9 @@ iab <expr> dts strftime("%Y/%m/%d %H:%M -")
 nnoremap <leader>r :w<enter>:!"%:p"<enter>
 
 let g:move_key_modifier = 'C'
+let maplocalleader="\\"
 
 let g:NERDTreeWinPos = "right"
-
 " [plasticboy/vim\-markdown: Markdown Vim Mode](https://github.com/plasticboy/vim-markdown)
 let g:vim_markdown_auto_extension_ext = 'markdown'
 " Fold on header 1
@@ -89,6 +89,9 @@ set directory=~/tmp//,/var/tmp//,/tmp//,.
 " let g:auto_save_events = ["InsertLeave", "TextChanged"]"
 
 let g:auto_save_events = ["CursorHold", "CursorHoldI"]
+
+autocmd filetype todo let g:auto_save = 1
+autocmd filetype todo :WatchForChanges!
 
 autocmd filetype taskpaper let g:auto_save = 1
 autocmd filetype taskpaper :WatchForChanges!
