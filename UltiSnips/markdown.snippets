@@ -1,5 +1,5 @@
 snippet md "description"
-Title: ${1:My Great Title}
+Title: "${1:My Great Title}"
 Author: ${2:mr.rcollins}
 Date: ${3:`date +%Y-%m`}-${4:`date +%d`}
 Category: $5
@@ -21,19 +21,22 @@ endsnippet
 
 snippet ggmeta "description"
 ---
-Title: ${1:My Great Title}
+Title: "${1:My Great Title}"
 Author: goz
 Date: ${2:`date +%Y-%m`}-${3:`date +%d`}
 Category: 
 Tags: 
 - Asides
-Status: 
+Status:
+Summary: ""
+featured_image: ""
+images: [ "" ]
 ---
 
 $4
 endsnippet
 
 snippet hugoyt "Hugo YT"
-{{< youtube ${VISUAL} >}}
+{{< youtube ${1} >}}
 endsnippet
 
