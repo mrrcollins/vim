@@ -6,6 +6,11 @@ execute pathogen#infect()
 
 :imap jk <Esc>
 :imap kj <Esc>
+:imap <c-@> .<enter>
+
+autocmd FileType markdown imap <space><space> .<enter>
+"autocmd FileType md imap @@| .<enter>
+
 iab <expr> dts strftime("%Y/%m/%d %H:%M -")       
 
 "Run scripts directly
