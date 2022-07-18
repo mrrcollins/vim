@@ -8,6 +8,10 @@ execute pathogen#infect()
 :imap kj <Esc>
 :imap <c-@> .<enter>
 
+"Make searches better
+set ignorecase
+set smartcase
+
 autocmd FileType markdown imap <space><space> .<enter>
 "autocmd FileType md imap @@| .<enter>
 
