@@ -28,7 +28,7 @@ The leader key is set to `\`.
 * `e<tab>` - Ultisnip to insert current date/time (`%Y/%m/%d %H:%M`). The advantage of this is that the date is select so you can change it and use `c-j` to go to the hour and then minute to change them. I use it to backdate entries in my [Journal](https://www.gozgeek.com/posts/2021/2021-05-21-journal-my-plain-text-journey-part-iv/).
 * `<space><space>` - [Derek Sivers tip on writing each line separately](https://sive.rs/1s). Two spaces will put a . and a return. Markdown doesn't care about lines with a single return, it will put them all in a paragraph until it see two returns. Except for Wordpress, it sees each return as a new paragraph.
 * `\r` - Save the current script and run it.
-* `c-r` - Turns on distraction free writing with Goyo.
+* `c-g` - Turns on distraction free writing with Goyo.
 * `c-n` - Opens Nerdtree on the right
 
 Look below for keys specific to certain tasks.
