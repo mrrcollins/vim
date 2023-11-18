@@ -39,6 +39,6 @@ echo "Removing vim-snipmate..."
 [ -d vim-snipmate ] && rm -Rf vim-snipmate
 
 
-[ ! -L ~/.vimrc ] && ln -s ~/.vim/.vimrc ~/.vimrc || echo "Symlink already exists..."
+[ ! -L ~/.vimrc ] && ln -s ~/.vim/vimrc ~/.vimrc || echo "Symlink already exists..."
 
 cd ~/.vim

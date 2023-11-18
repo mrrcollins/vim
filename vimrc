@@ -6,24 +6,40 @@ execute pathogen#infect()
 
 :imap jk <Esc>
 :imap kj <Esc>
+
+"I have no memory of adding this key.
 :imap <c-@> .<enter>
 
 "Make searches better
 set ignorecase
 set smartcase
 
+"Move lines or text blocks with c-j amd c-k
+"Moving Lines - VimTricks
+"https://vimtricks.com/p/vimtrick-moving-lines/
+nnoremap <c-j> :m .+1<CR>==
+nnoremap <c-k> :m .-2<CR>==
+inoremap <c-j> <Esc>:m .+1<CR>==gi
+inoremap <c-k> <Esc>:m .-2<CR>==gi
+vnoremap <c-j> :m '>+1<CR>gv=gv
+vnoremap <c-k> :m '<-2<CR>gv=gv
+
+
+"Derek Sivers tip, write each line separately. Markdown doesn't care about
+"single returns. Two spaces in a row add a . and a return
 autocmd FileType markdown imap <space><space> .<enter>
 "autocmd FileType md imap @@| .<enter>
 
+"Current date and time for journal
 iab <expr> dts strftime("%Y/%m/%d %H:%M -")       
 
-"Run scripts directly
+"Run scripts directly, it also saves them before running. You may not want 
+"them to automatically save though
 nnoremap <leader>r :w<enter>:!"%:p"<enter>
 
 let g:move_key_modifier = 'C'
 let maplocalleader="\\"
 
-let g:NERDTreeWinPos = "right"
 " [plasticboy/vim\-markdown: Markdown Vim Mode](https://github.com/plasticboy/vim-markdown)
 let g:vim_markdown_auto_extension_ext = 'markdown'
 " Fold on header 1
@@ -39,9 +55,13 @@ let g:vim_markdown_toc_autofit = 1
 ""let g:vim_markdown_folding_disabled = 1
 
 let @r = ""
+
+"Turn on distraction free writing. Works great with full screen terminals
 noremap <c-g> :Goyo<CR>
 imap <c-g> <C-O><c-g>
 
+"Browser files on the right
+let g:NERDTreeWinPos = "right"
 map <C-n> :NERDTreeToggle<CR>
 nnoremap <leader>b :buffers<CR>:buffer<space>
 
@@ -58,8 +78,8 @@ nnoremap <buffer> <silent> <Leader>tQ
     \    :<C-u>call taskpaper#delete_tag('priority', '')<CR>
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+""let g:UltiSnipsJumpForwardTrigger="<c-j>"
+""let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " Set UltiSnipsFolder"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
@@ -100,12 +120,13 @@ set directory=~/tmp//,/var/tmp//,/tmp//,.
 
 let g:auto_save_events = ["CursorHold", "CursorHoldI"]
 
+"Automatically save todo, taskpape, and markdown files while editing
 autocmd filetype todo let g:auto_save = 1
 autocmd filetype todo :WatchForChanges!
 
 autocmd filetype taskpaper let g:auto_save = 1
 autocmd filetype taskpaper :WatchForChanges!
-"
+
 autocmd filetype markdown let g:auto_save = 1
 autocmd filetype markdown :WatchForChanges!
 
@@ -217,12 +238,12 @@ autocmd FileType markdown,md,rst WP
 au BufNewFile,BufRead *.ni      setf inform7
 
 "Easier navigations of splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-set splitbelow
-set splitright
+""nnoremap <C-J> <C-W><C-J>
+""nnoremap <C-K> <C-W><C-K>
+""nnoremap <C-L> <C-W><C-L>
+""nnoremap <C-H> <C-W><C-H>
+""set splitbelow
+""set splitright
 
 highlight LineNr ctermfg=darkcyan ctermbg=black
 highlight foldcolumn ctermbg=black
