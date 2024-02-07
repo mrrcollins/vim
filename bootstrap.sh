@@ -34,6 +34,8 @@ echo "Attempting to clone vim-markdown..."
 [ ! -d vim-markdown ] && git clone --quiet https://github.com/plasticboy/vim-markdown.git
 echo "Attempting to clone vim-move..."
 [ ! -d vim-move ] && git clone --quiet https://github.com/matze/vim-move.git
+echo "Attempting to clone vim-bracketed-paste..."
+[ ! -d vim-move ] && git clone --quiet https://github.com/ConradIrwin/vim-bracketed-paste
 
 echo "Removing vim-snipmate..."
 [ -d vim-snipmate ] && rm -Rf vim-snipmate
