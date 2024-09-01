@@ -4,8 +4,14 @@ if has('win32') || has('win64')
 
 execute pathogen#infect()
 
-:imap jk <Esc>
-:imap kj <Esc>
+"":imap jk <Esc>
+"":imap kj <Esc>
+
+"" Stop the cursor from moving left when exiting insert mode
+set timeoutlen=300
+inoremap jk x<C-c>"_x
+inoremap kj x<C-c>"_x
+
 
 "I have no memory of adding this key.
 :imap <c-@> .<enter>
