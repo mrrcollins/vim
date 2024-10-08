@@ -224,12 +224,13 @@ filetype plugin indent on
 ""setlocal tabstop=4 shiftwidth=4 expandtab
 set tabstop=4 
 set shiftwidth=4 
-set expandtab
+""set expandtab
 au BufRead * normal zR
 
 autocmd FileType p8 setlocal tabstop=1 shiftwidth=1 noexpandtab
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType tsv setlocal tabstop=4 shiftwidth=4 noexpandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab omnifunc=phpcomplete#CompletePHP
 ""autocmd FileType markdown,md,rst setlocal formatoptions=ant textwidth=72 wrapmargin=0 foldcolumn=10 columns=100 nonumber
 autocmd FileType markdown,md,rst WP 
