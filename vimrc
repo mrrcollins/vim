@@ -10,7 +10,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-colorscheme spaceduck
+""colorscheme spaceduck
 
 "":imap jk <Esc>
 "":imap kj <Esc>
