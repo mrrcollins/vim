@@ -35,9 +35,12 @@ echo "Attempting to clone Goyo..."
 echo "Attempting to clone vim-move..."
 [ ! -d vim-move ] && git clone --quiet https://github.com/matze/vim-move.git
 echo "Attempting to clone vim-bracketed-paste..."
-[ ! -d vim-move ] && git clone --quiet https://github.com/ConradIrwin/vim-bracketed-paste
+[ ! -d vim-bracketed-paste ] && git clone --quiet https://github.com/ConradIrwin/vim-bracketed-paste
 echo "Attempting to clone context.vim..."
 [ ! -d context.vim ] && git clone --quiet https://github.com/wellle/context.vim.git
+
+echo "Attempting to spaceduck theme..."
+[ ! -d spaceduck ] && git clone --quiet https://github.com/pineapplegiant/spaceduck.git
 
 echo "Removing vim-snipmate..."
 [ -d vim-snipmate ] && rm -Rf vim-snipmate
