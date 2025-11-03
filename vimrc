@@ -11,6 +11,7 @@ if exists('+termguicolors')
 endif
 
 ""colorscheme spaceduck
+colorscheme ego
 
 "":imap jk <Esc>
 "":imap kj <Esc>
@@ -147,7 +148,7 @@ autocmd filetype markdown :WatchForChanges!
 
 if has('gui_running')
     set background=dark
-    colorscheme solarized
+    ""colorscheme solarized
 ""    set guifont=Source\ Code\ Pro:h14
     set guifont=Consolas:h16:cANSI
     set guioptions-=r   "Don't show right scroll bar
