@@ -1,17 +1,21 @@
+
 if has('win32') || has('win64')
       set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
-  endif
+endif
 
 execute pathogen#infect()
 
+syntax on
+set background=dark
+
 if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	set termguicolors
 endif
 
-""colorscheme spaceduck
-colorscheme ego
+colorscheme colorsbox-stblue
+""colorscheme ego
 
 "":imap jk <Esc>
 "":imap kj <Esc>
@@ -261,8 +265,8 @@ au BufNewFile,BufRead *.ni      setf inform7
 ""set splitbelow
 ""set splitright
 
-highlight LineNr ctermfg=darkcyan ctermbg=black
-highlight foldcolumn ctermbg=black
+""highlight LineNr ctermfg=darkcyan ctermbg=black
+""highlight foldcolumn ctermbg=black
 
 ""set wrap linebreak nolist
 ""set tw=72 
