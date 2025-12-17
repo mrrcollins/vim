@@ -52,6 +52,10 @@ Look below for keys specific to certain tasks.
     zh - Hide all lines containing word under cursor 
 	zn - Open all folds
 
+## Colors
+
+I grabbed the colors from [vim-colorschemes, by flazz | vimcolorschemes](https://vimcolorschemes.com/flazz/vim-colorschemes).
+
 # Installation:
 
 If you already have a ~/.vim, you'll want to rename or move it.
