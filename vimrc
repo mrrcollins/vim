@@ -17,6 +17,12 @@ endif
 colorscheme colorsbox-stblue
 ""colorscheme ego
 
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave ?* mkview
+  autocmd BufWinEnter ?* silent! loadview
+augroup END
+
 "":imap jk <Esc>
 "":imap kj <Esc>
 
