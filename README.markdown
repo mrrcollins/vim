@@ -85,6 +85,7 @@ If you use the bootstrap.sh you can ignore the rest. Well, except for the one li
     git clone https://github.com/plasticboy/vim-markdown.git
     git clone https://github.com/freitass/todo.txt-vim.git
     git clone https://github.com/ConradIrwin/vim-bracketed-paste
+    git clone https://github.com/pineapplegiant/spaceduck.git
 
 There is probably a better way, but here is a one-liners stolen from [here](https://coderwall.com/p/rffwva/update-your-vim-pathogen-plugins)to update all of the plugins in `~/.vim/bundle`: 
 

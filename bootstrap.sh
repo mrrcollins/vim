@@ -30,17 +30,23 @@ echo "Attempting to clone vim-autoread..."
 [ ! -d vim-autoread ] && git clone --quiet https://github.com/djoshea/vim-autoread.git
 echo "Attempting to clone Goyo..."
 [ ! -d goyo.vim ] && git clone --quiet https://github.com/junegunn/goyo.vim.git
-echo "Attempting to clone vim-markdown..."
-[ ! -d vim-markdown ] && git clone --quiet https://github.com/plasticboy/vim-markdown.git
+#echo "Attempting to clone vim-markdown..."
+#[ ! -d vim-markdown ] && git clone --quiet https://github.com/plasticboy/vim-markdown.git
 echo "Attempting to clone vim-move..."
 [ ! -d vim-move ] && git clone --quiet https://github.com/matze/vim-move.git
 echo "Attempting to clone vim-bracketed-paste..."
-[ ! -d vim-move ] && git clone --quiet https://github.com/ConradIrwin/vim-bracketed-paste
+[ ! -d vim-bracketed-paste ] && git clone --quiet https://github.com/ConradIrwin/vim-bracketed-paste
 echo "Attempting to clone context.vim..."
 [ ! -d context.vim ] && git clone --quiet https://github.com/wellle/context.vim.git
 
+echo "Attempting to spaceduck theme..."
+[ ! -d spaceduck ] && git clone --quiet https://github.com/pineapplegiant/spaceduck.git
+
 echo "Removing vim-snipmate..."
 [ -d vim-snipmate ] && rm -Rf vim-snipmate
+
+echo "Removing vim-markdown..."
+[ -d vim-markdown ] && rm -Rf vim-markdown
 
 
 [ ! -L ~/.vimrc ] && ln -s ~/.vim/vimrc ~/.vimrc || echo "Symlink already exists..."
