@@ -14,7 +14,7 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
-colorscheme colorsbox-stblue
+""colorscheme colorsbox-stblue
 ""colorscheme ego
 
 augroup remember_folds
@@ -28,9 +28,8 @@ augroup END
 
 "" Stop the cursor from moving left when exiting insert mode
 set timeoutlen=300
-inoremap jk x<C-c>"_x
-inoremap kj x<C-c>"_x
-
+inoremap jk x<C-c>"_x:colorscheme ego<CR>
+inoremap kj x<C-c>"_x:colorscheme ego<CR>
 
 "I have no memory of adding this key.
 :imap <c-@> .<enter>
@@ -300,9 +299,11 @@ nnoremap <silent> <C-S> :<C-u>Update<CR>
 " highlight the status bar when in insert mode
 " (https://github.com/chrishunt/dot-files/)
 set laststatus=2
-""if version >= 700
+if version >= 700
 ""      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
 ""      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-""endif
+	au InsertEnter * colorscheme colorsbox-stblue
+	au InsertLeave * colorscheme ego
+endif
 ""
 ""au BufRead,BufNewFile * startinsert
