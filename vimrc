@@ -1,6 +1,8 @@
-
+" Put this at the top of your .vimrc on Windows
 if has('win32') || has('win64')
-      set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
+  set runtimepath^=~/.vim
+  set runtimepath+=~/.vim/after
+  let &packpath = &runtimepath
 endif
 
 execute pathogen#infect()
