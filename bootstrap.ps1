@@ -1,3 +1,7 @@
+
+# Verify that Python3 is installed
+winget install python3
+
 # --- Configuration ---
 # On Windows, we use 'vimfiles' instead of '.vim'
 $VimDir = "$env:USERPROFILE\vimfiles"
