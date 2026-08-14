@@ -1,3 +1,11 @@
+" MUST GO AT THE TOP OF ~/.VIMRC
+let g:is_bash = 1
+let g:sh_fold_enabled = 7
+
+" Then your standard initializations can follow
+syntax on
+filetype plugin indent on
+
 " Put this at the top of your .vimrc on Windows
 if has('win32') || has('win64')
   set runtimepath^=~/.vim
@@ -13,7 +21,6 @@ endif
 
 execute pathogen#infect()
 
-syntax on
 set background=dark
 
 if exists('+termguicolors')
@@ -316,3 +323,11 @@ nnoremap <silent> <C-S> :<C-u>Update<CR>
 
 ""
 ""au BufRead,BufNewFile * startinsert
+augroup ClearBashFoldingBug
+  autocmd!
+  " Reinforce syntax folding specifically for shell scripts on entry
+  autocmd BufRead,BufNewFile *.sh setlocal foldmethod=syntax
+  " Hard-reload syntax to force the engine to parse the folds correctly
+  autocmd FileType sh syntax off | syntax on
+augroup END
+
