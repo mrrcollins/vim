@@ -29,11 +29,11 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave ?* mkview
-  autocmd BufWinEnter ?* silent! loadview
-augroup END
+""augroup remember_folds
+""  autocmd!
+""  autocmd BufWinLeave ?* mkview
+""  autocmd BufWinEnter ?* silent! loadview
+""augroup END
 
 "":imap jk <Esc>
 "":imap kj <Esc>
@@ -274,7 +274,7 @@ filetype plugin indent on
 set tabstop=4 
 set shiftwidth=4 
 ""set expandtab
-au BufRead * normal zR
+""au BufRead * normal zR
 
 autocmd FileType p8 setlocal tabstop=1 shiftwidth=1 noexpandtab
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 expandtab
@@ -323,11 +323,3 @@ nnoremap <silent> <C-S> :<C-u>Update<CR>
 
 ""
 ""au BufRead,BufNewFile * startinsert
-augroup ClearBashFoldingBug
-  autocmd!
-  " Reinforce syntax folding specifically for shell scripts on entry
-  autocmd BufRead,BufNewFile *.sh setlocal foldmethod=syntax
-  " Hard-reload syntax to force the engine to parse the folds correctly
-  autocmd FileType sh syntax off | syntax on
-augroup END
-
