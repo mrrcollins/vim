@@ -40,21 +40,24 @@ endif
 
 ""colorscheme colorsbox-stblue
 ""colorscheme ego
+colorscheme spaceduck
 
 " highlight the status bar when in insert mode
 " (https://github.com/chrishunt/dot-files/)
 set laststatus=2
-if version >= 700
-""      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-""      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-	au InsertEnter * colorscheme colorsbox-stblue
-	au InsertLeave * colorscheme ego
-endif
+
+"#""if version >= 700
+"#"	""      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+"#"	""      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+"#"	""au InsertEnter * colorscheme colorsbox-stblue
+"#"	au InsertEnter * colorscheme spaceduck
+"#"	au InsertLeave * colorscheme default
+"#"endif
 
 "" Stop the cursor from moving left when exiting insert mode
 set timeoutlen=300
-inoremap jk x<C-c>"_x:colorscheme ego<CR>
-inoremap kj x<C-c>"_x:colorscheme ego<CR>
+inoremap jk x<C-c>"_x:colorscheme spaceduck<CR>
+inoremap kj x<C-c>"_x:colorscheme spaceduck<CR>
 
 "I have no memory of adding this key.
 :imap <c-@> .<enter>

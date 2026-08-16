@@ -42,6 +42,9 @@ echo "Attempting to clone context.vim..."
 echo "Attempting to spaceduck theme..."
 [ ! -d spaceduck ] && git clone --quiet https://github.com/pineapplegiant/spaceduck.git
 
+echo "Installing color schemes..."
+[ ! -d colorschemes ] && git clone --quiet git@github.com:gmist/vim-palette.git colorschemes
+
 echo "Removing vim-snipmate..."
 [ -d vim-snipmate ] && rm -Rf vim-snipmate
 

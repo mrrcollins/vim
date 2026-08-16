@@ -54,7 +54,7 @@ Look below for keys specific to certain tasks.
 
 ## Colors
 
-I grabbed the colors from [vim-colorschemes, by flazz | vimcolorschemes](https://vimcolorschemes.com/flazz/vim-colorschemes).
+I grabbed the colors from ~[vim-colorschemes, by flazz | vimcolorschemes](https://vimcolorschemes.com/flazz/vim-colorschemes)~ `git clone https://github.com/gmist/vim-palette.git`.
 
 # Installation:
 
@@ -91,7 +91,7 @@ If you use the bootstrap.sh you can ignore the rest. Well, except for the one li
     git clone https://github.com/ConradIrwin/vim-bracketed-paste
     git clone https://github.com/pineapplegiant/spaceduck.git
     git clone https://github.com/sheerun/vim-polyglot.git
-    git clone https://github.com/flazz/vim-colorschemes.git
+    git clone https://github.com/gmist/vim-palette.git colorschemes
 
 There is probably a better way, but here is a one-liners stolen from [here](https://coderwall.com/p/rffwva/update-your-vim-pathogen-plugins)to update all of the plugins in `~/.vim/bundle`: 
 
