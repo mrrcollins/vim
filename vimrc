@@ -1,6 +1,8 @@
+set nocompatible
 " MUST GO AT THE TOP OF ~/.VIMRC
 let g:is_bash = 1
 let g:sh_fold_enabled = 7
+autocmd FileType sh setlocal foldmethod=syntax
 
 " Then your standard initializations can follow
 syntax on
@@ -29,35 +31,35 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
-""augroup remember_folds
-""  autocmd!
-""  autocmd BufWinLeave ?* mkview
-""  autocmd BufWinEnter ?* silent! loadview
-""augroup END
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave ?* mkview
+  autocmd BufWinEnter ?* silent! loadview
+augroup END
 
-"":imap jk <Esc>
-"":imap kj <Esc>
-
-""colorscheme colorsbox-stblue
+colorscheme colorsbox-stblue
 ""colorscheme ego
-colorscheme spaceduck
+""colorscheme spaceduck
 
 " highlight the status bar when in insert mode
 " (https://github.com/chrishunt/dot-files/)
 set laststatus=2
 
-"#""if version >= 700
-"#"	""      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-"#"	""      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
-"#"	""au InsertEnter * colorscheme colorsbox-stblue
-"#"	au InsertEnter * colorscheme spaceduck
-"#"	au InsertLeave * colorscheme default
-"#"endif
+if version >= 700
+	""      au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
+	""      au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+	""au InsertEnter * colorscheme colorsbox-stblue
+	au InsertEnter * colorscheme spaceduck
+	au InsertLeave * colorscheme colorsbox-stblue
+endif
 
 "" Stop the cursor from moving left when exiting insert mode
 set timeoutlen=300
 inoremap jk x<C-c>"_x:colorscheme spaceduck<CR>
 inoremap kj x<C-c>"_x:colorscheme spaceduck<CR>
+"":imap jk <Esc>
+"":imap kj <Esc>
+
 
 "I have no memory of adding this key.
 :imap <c-@> .<enter>

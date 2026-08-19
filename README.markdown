@@ -17,6 +17,8 @@ Under OpenBSD try `vim-nox`
 * Tabs are expanded. Ruby is 2 spaces, Python and PHP is 4.
 * Word processing mode turned on for .markdown, .md, and .rst files
 
+If folding doesn't work, launch vim with `vim -u ~/.vimrc`.
+
 # Keys
 
 The leader key is set to `\`.
