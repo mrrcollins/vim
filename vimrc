@@ -1,4 +1,9 @@
 set nocompatible
+set backspace=indent,eol,start
+set history=50      " keep 50 lines of command-line history (Vim's own built-in default is only 20)
+set ruler           " show cursor position (row/col) in the status line — you may already have this from your old file
+set nomodeline      " disable modelines; on by default in old vi-compatible mode, and disabling avoids a real historic security issue (files can embed vim settings that execute on open)
+
 " MUST GO AT THE TOP OF ~/.VIMRC
 let g:is_bash = 1
 let g:sh_fold_enabled = 7
