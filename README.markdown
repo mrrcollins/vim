@@ -88,9 +88,9 @@ If you use the bootstrap.sh you can ignore the rest. Well, except for the one li
     git clone https://github.com/reedes/vim-pencil
     git clone https://github.com/djoshea/vim-autoread.git
     git clone https://github.com/junegunn/goyo.vim.git
-    git clone https://github.com/plasticboy/vim-markdown.git
-    git clone https://github.com/freitass/todo.txt-vim.git
+    git clone https://github.com/matze/vim-move.git
     git clone https://github.com/ConradIrwin/vim-bracketed-paste
+    git clone https://github.com/wellle/context.vim.git
     git clone https://github.com/pineapplegiant/spaceduck.git
     git clone https://github.com/sheerun/vim-polyglot.git
     git clone https://github.com/gmist/vim-palette.git colorschemes

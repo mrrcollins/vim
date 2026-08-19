@@ -42,6 +42,9 @@ echo "Attempting to clone context.vim..."
 echo "Attempting to spaceduck theme..."
 [ ! -d spaceduck ] && git clone --quiet https://github.com/pineapplegiant/spaceduck.git
 
+echo "Installing polygot themes..."
+    [ ! -d vim-polyglot ] && git clone https://github.com/sheerun/vim-polyglot.git
+
 echo "Installing color schemes..."
 [ ! -d colorschemes ] && git clone --quiet git@github.com:gmist/vim-palette.git colorschemes
 
